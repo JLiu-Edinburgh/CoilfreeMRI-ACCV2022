@@ -1,5 +1,5 @@
 # CoilfreeMRI_ACCV2022
-This is the code for paper "Coil-Agnostic Attention-Based Network for Parallel MRI Reconstruction" accepted at ACCV2022.
+This is the code for paper "Coil-Agnostic Attention-Based Network for Parallel MRI Reconstruction" accepted at **ACCV2022**.
 
 # Environment 
 1. create Anaconda environment via conda create -n myenv
