@@ -13,7 +13,7 @@ This is the code for paper "*Coil-Agnostic Attention-Based Network for Parallel 
 * pathlib
 
 # Dataset
-In our experiments, data are saved in h5 files with keywords `csm` and `multi_coil`, representing the sensitivity maps and multi-coil images. The structure of one instance is shown as follows:
+Multi-coil knee MRI samples from the *FastMRI Dataset* [1] are used in our experiments. Data are saved in h5 files with keywords `csm` and `multi_coil`, representing the sensitivity maps and multi-coil images. The structure of one instance is shown as follows:
 
 * file['section0']['csm'][()] of shape (15, 2, 256, 256),
 * file['section0']['multi_coil'][()] of shape (15, 2, 256, 256),
@@ -26,3 +26,7 @@ run the code to train the model:
 python multicoil_knee_baseline.py --mask ./mask/brain_mask_0_125.pt --dataroot path/to/training/dataset --testroot path/to/test/samples --dataset_name multi_coil_DACB --n_epochs 35 --epoch 0
 
 Checkpoints will be saved in `./saved_models/multi_coil_DACB` and samples in `./images/multi_coil_DACB`.
+
+# List of Papers
+
+1. Zbontar, J.\*, Knoll, F.\*, Sriram, A.\*, Murrell, T., Huang, Z., Muckley, M. J., ... & Lui, Y. W. (2018). [fastMRI: An Open Dataset and Benchmarks for Accelerated MRI](https://arxiv.org/abs/1811.08839). *arXiv preprint arXiv:1811.08839*.
